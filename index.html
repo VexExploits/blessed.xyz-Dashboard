@@ -6,36 +6,51 @@
   <link rel="stylesheet" href="styles.css">
   <title>blessed.xyz | Dashboard</title>
 </head>
-<body onload="playMusic()">
-  <audio id="music">
-    <source src="song1.mp3" type="audio/mpeg">
-    <source src="song2.mp3" type="audio/mpeg">
-    <source src="song3.mp3" type="audio/mpeg">
-  </audio>
-  
-  <div class="container">
-    <h1 class="title">blessed.xyz</h1>
+<body>
+  <div id="entry" class="entry-screen">
+    <button onclick="enterSite()">CLICK TO ENTER</button>
+  </div>
 
-    <div class="boxes">
-      <div class="box">
-        <h2>Superiority Rust.</h2>
-        <p>Internal For Cracked Rust.</p>
-        <a href="https://direct-link.net/1120312/superiority-rust" class="button" onclick="playMusic()">Download Now</a>
-      </div>
-      <div class="box">
-        <h2>blessed.xyz Scripts</h2>
-        <p>Download blessed.xyz old recoil scripts.</p>
-        <a href="https://cdn.discordapp.com/attachments/1230338817840386132/1230357650974183484/blessedxyz.dll?ex=663306da&is=662091da&hm=ad0db5dc575d21e59c1537b4469a4fc4cb41e491b8f175ee775139fc8b201e64&" class="button" onclick="playMusic()">Download</a>
-      </div>
-      <div class="box">
-        <h2>More!</h2>
-        <p>Join the Forum Discord.</p>
-        <a href="https://discord.gg/36E2YNZnUC" class="button" onclick="playMusic()">More</a>
+  <div id="main" class="container hidden">
+    <audio id="music" autoplay loop>
+      <source src="song1.mp3" type="audio/mpeg">
+      <source src="song2.mp3" type="audio/mpeg">
+      <source src="song3.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="container">
+      <h1 class="title">blessed.xyz</h1>
+
+      <div class="boxes">
+        <div class="box">
+          <h2>Superiority Rust.</h2>
+          <p>Internal For Cracked Rust.</p>
+          <a href="https://direct-link.net/1120312/superiority-rust" class="button">Download Now</a>
+        </div>
+        <div class="box">
+          <h2>blessed.xyz Scripts</h2>
+          <p>Download blessed.xyz old recoil scripts.</p>
+          <a href="https://cdn.discordapp.com/attachments/1230338817840386132/1230357650974183484/blessedxyz.dll?ex=663306da&is=662091da&hm=ad0db5dc575d21e59c1537b4469a4fc4cb41e491b8f175ee775139fc8b201e64&" class="button">Download</a>
+        </div>
+        <div class="box">
+          <h2>More!</h2>
+          <p>Join the Forum Discord.</p>
+          <a href="https://discord.gg/36E2YNZnUC" class="button">More</a>
+        </div>
       </div>
     </div>
   </div>
 
   <script>
+    function enterSite() {
+      var entryScreen = document.getElementById('entry');
+      var mainContent = document.getElementById('main');
+
+      entryScreen.style.display = 'none';
+      mainContent.classList.remove('hidden');
+      playMusic();
+    }
+
     function playMusic() {
       var audio = document.getElementById('music');
       audio.play();
