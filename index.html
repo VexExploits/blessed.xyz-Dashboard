@@ -3,11 +3,65 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      background-color: rgb(32, 32, 32);
+      font-family: Arial, sans-serif;
+      color: blue;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #mainContent {
+      display: none;
+    }
+
+    #enterButton {
+      font-size: 1.5em;
+      padding: 10px 20px;
+      background-color: blue;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    .title {
+      color: white;
+    }
+
+    .box {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      margin: 20px;
+      border-radius: 10px;
+    }
+
+    .button {
+      background-color: blue;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    .button:hover {
+      background-color: darkblue;
+    }
+  </style>
   <title>blessed.xyz | Dashboard</title>
 </head>
 <body>
-  <div id="mainContent" style="display: none;">
+  <div id="mainContent">
     <audio id="music">
       <source src="song1.mp3" type="audio/mpeg">
       <source src="song2.mp3" type="audio/mpeg">
