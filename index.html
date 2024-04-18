@@ -6,8 +6,8 @@
   <link rel="stylesheet" href="styles.css">
   <title>blessed.xyz | Dashboard</title>
 </head>
-<body onload="playMusic()">
-  <audio id="music">
+<body>
+  <audio id="music" autoplay>
     <source src="song1.mp3" type="audio/mpeg">
     <source src="song2.mp3" type="audio/mpeg">
     <source src="song3.mp3" type="audio/mpeg">
@@ -40,6 +40,9 @@
       var audio = document.getElementById('music');
       audio.play();
     }
+
+    // Call the playMusic function when the page loads
+    window.onload = playMusic;
   </script>
 </body>
 </html>
