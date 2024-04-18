@@ -124,3 +124,29 @@ button {
   margin-top: 10px;
 }
 
+.patch-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.patch-table th, .patch-table td {
+  padding: 8px 12px;
+  text-align: left;
+  border-bottom: 1px solid #666;
+}
+
+.patch-table th {
+  font-weight: bold;
+}
+
+.green-text {
+  color: #00ff00;
+}
+
+.orange-text {
+  color: #ff9900;
+}
+
+.red-text {
+  color: #ff0000;
+}
