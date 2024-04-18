@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
-
   <title>blessed.xyz | Dashboard</title>
 </head>
 <body>
@@ -18,7 +16,6 @@
   <div class="container">
     <h1 class="title">blessed.xyz</h1>
 
-   
     <div class="boxes">
       <div class="box">
         <h2>Superiority Rust.</h2>
@@ -42,11 +39,17 @@
     window.onload = function() {
       var audio = document.getElementById('music');
       var songs = ['song1.mp3', 'song2.mp3', 'song3.mp3'];
-      var randomIndex = Math.floor(Math.random() * songs.length);
-      audio.src = songs[randomIndex];
+      var currentSongIndex = 0;
+
+      audio.src = songs[currentSongIndex];
       audio.load();
+
+      audio.onended = function() {
+        currentSongIndex = (currentSongIndex + 1) % songs.length;
+        audio.src = songs[currentSongIndex];
+        audio.play();
+      };
     };
   </script>
-
 </body>
 </html>
