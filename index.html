@@ -24,7 +24,7 @@
       font-size: 2em;
       padding: 20px 40px;
       background-color: rgb(32, 32, 32);
-      color: rgb(32, 32, 32);
+      color: white;
       border: 2px solid blue;
       cursor: pointer;
     }
@@ -56,6 +56,10 @@
 
     .button:hover {
       background-color: darkblue;
+    }
+
+    #gif {
+      display: none;
     }
   </style>
   <title>blessed.xyz | Dashboard</title>
@@ -91,14 +95,18 @@
     </div>
   </div>
 
+  <img src="your_gif_url_here" id="gif" alt="">
+
   <button id="enterButton" onclick="showContent()">CLICK TO ENTER</button>
 
   <script>
     function showContent() {
       var content = document.getElementById('mainContent');
       var button = document.getElementById('enterButton');
+      var gif = document.getElementById('gif');
       content.style.display = 'block';
       button.style.display = 'none';
+      gif.style.display = 'none';
 
       // Play the music
       var audio = document.getElementById('music');
